@@ -15,41 +15,37 @@ class HomeScreen extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.red[500],
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        crossAxisAlignment: CrossAxisAlignment.end,
+      body: Row(
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: <Widget>[
-              Text('hello'),
-              Container(
-                padding: EdgeInsets.all(10.0),
-                child: Text('there'),
-                color: Colors.amber,
-              ),
-              RaisedButton(
-                onPressed: () {},
-                child: Text('senpai'),
-                color: Colors.black12,
-              )
-            ],
+          Expanded(
+              child: Image.asset('assets/a.jpg'),
+              flex: 3,
           ),
-          Container(
-            padding: EdgeInsets.all(10.0),
-            color: Colors.amber,
-            child: Text('one'),
+          Expanded(
+            flex: 3,
+            child: Container(
+              padding: EdgeInsets.all(30.0),
+              color: Colors.amber,
+              child: Text('senpai')
+            ),
           ),
-          Container(
-            padding: EdgeInsets.all(20.0),
-            color: Colors.cyan,
-            child: Text('two'),
+          Expanded(
+            flex: 2,
+            child: Container(
+                padding: EdgeInsets.all(30.0),
+                color: Colors.red,
+                child: Text('senpai 1')
+            ),
           ),
-          Container(
-            padding: EdgeInsets.all(30.0),
-            color: Colors.red,
-            child: Text('three'),
+          Expanded(
+            flex: 1,
+            child: Container(
+                padding: EdgeInsets.all(30.0),
+                color: Colors.cyan,
+                child: Text('senpai 2')
+            ),
           ),
+
         ],
       ),
       floatingActionButton: FloatingActionButton(
